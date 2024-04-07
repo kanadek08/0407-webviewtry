@@ -5,16 +5,19 @@ const provider = await EthereumProvider.init({
   metadata: {
     name: 'webview try',
     description: 'Trying webview connection',
-    url: 'https://mywebsite.com', // origin must match your domain & subdomain
+    url: 'https://0407-webviewtry.vercel.app/', // origin must match your domain & subdomain
     icons: ['https://avatars.githubusercontent.com/u/37784886']
   },
   showQrModal: false,
-  optionalChains: [1, 137, 2020],
+  optionalChains: [9372, 19011, 20197, 40875, 11155111],
 
   /*Optional - Add custom RPCs for each supported chain*/
   rpcMap: {
-    1: 'mainnet.rpc...',
-    137: 'polygon.rpc...'
+    9372: 'https://rpc.testnet.oasys.games',
+    19011: 'https://rpc.mainnet.oasys.games', 
+    20197: 'https://rpc.sandverse.oasys.games', 
+    40875: 'https://rpc.testnet.oasys.homeverse.games', 
+    11155111: 'https://rpc.sepolia.org',
   }
 })
 
