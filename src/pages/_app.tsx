@@ -39,7 +39,15 @@ const metadata = {
 
 const wagmiConfig = defaultWagmiConfig({ chains, projectId, metadata });
 
-createWeb3Modal({ wagmiConfig, projectId, chains });
+createWeb3Modal({ 
+	wagmiConfig, 
+	projectId, 
+	chains,
+	featuredWalletIds: [
+		"37aacf1e6bf6793c892e42c3f7623a61d9ffcb4337010804cc3193c4d596cf5c", // Oasys Passport
+	],
+
+});
 
 export default function App({ Component, pageProps }: AppProps) {
 	const [ready, setReady] = useState(false);

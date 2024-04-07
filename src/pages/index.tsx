@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import { useState } from "react";
+import Connect from "@/components/Connect";
 
 export default function Home() {
 	const [isNetworkSwitchHighlighted, setIsNetworkSwitchHighlighted] =
@@ -54,10 +55,20 @@ export default function Home() {
 									: ``
 							}`}
 						>
+							<Connect />
+						</div>
+						<div
+							onClick={closeAll}
+							className={`${styles.highlight} ${
+								isConnectHighlighted
+									? styles.highlightSelected
+									: ``
+							}`}
+						>
 							<w3m-button />
 						</div>
-					</div>
 				</div>
+			</div>
 			</header>
 			<main className={styles.main}>
 				<div className={styles.wrapper}>
